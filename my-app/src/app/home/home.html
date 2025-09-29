@@ -1,0 +1,80 @@
+<!-- Button to Open Modal -->
+<div class="text-center mt-5">
+  <button class="btn btn-lg btn-gradient" data-bs-toggle="modal" data-bs-target="#formModal">
+    🚀 Open Form
+  </button>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="formModal"
+  tabindex="-1"
+  aria-labelledby="formModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg border-0 rounded-4">
+      <!-- Header -->
+      <div
+        class="modal-header text-white rounded-top-4"
+        style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)"
+      >
+        <h5 class="modal-title fw-bold" id="formModalLabel">💌 Contact Us</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body p-4">
+        <form #contactForm="ngForm">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control form-control-lg rounded-pill"
+              name="name"
+              [(ngModel)]="formData.name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control form-control-lg rounded-pill"
+              name="email"
+              [(ngModel)]="formData.email"
+              required
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer d-flex justify-content-between">
+        <button
+          type="button"
+          class="btn btn-outline-secondary rounded-pill px-4"
+          data-bs-dismiss="modal"
+        >
+          ❌ Cancel
+        </button>
+        <button
+          type="button"
+          class="btn btn-gradient rounded-pill px-4"
+          (click)="submitForm()"
+          data-bs-dismiss="modal"
+        >
+          ✅ Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

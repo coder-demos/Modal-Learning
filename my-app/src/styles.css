@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth modal animation */
+.modal-content {
+  animation: fadeInUp 0.4s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Navbar styling */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.custom-navbar .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffcc00;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Links */
+.custom-navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.custom-navbar .nav-links li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+.custom-navbar .nav-links li a:hover,
+.custom-navbar .nav-links li a.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 3px;
+}
+
+/* Nav buttons */
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 18px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Active state */
+.nav-btn.active {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Page content styling */
+.page-card {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.page-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2575fc;
+  margin-bottom: 15px;
+}
+
+.page-card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
